@@ -21,7 +21,7 @@ At the login page, input any credentials (for example: `admin:admin`).
 Before hitting enter:
 - Open **Burp Suite**
 - Enable **Proxy Intercept**
-- Make sure **FoxyProxy** in chrome is enabled.
+- Make sure **FoxyProxy** in enabled in your browser.
 
 📸 Screenshot:
 
@@ -55,6 +55,18 @@ Open **Inspector** in Burp Suite. The value is encoded twice:
 📸 Screenshot:
 
 ![Decoded Flag](https://github.com/user-attachments/assets/83877965-8e08-47e5-8abc-84d4cf6fd25d)
+
+---
+
+## 🔎 Explanation of the Vulnerability
+The challenge relies on **insecure cookie storage**. Instead of protecting the recipe, the server simply encodes it (URL + Base64). Encoding only hides the data, but anyone with access to the cookie can decode it easily. This is a common mistake in web applications where developers confuse encoding with encryption.
+
+---
+
+## 📝 Lesson Learned
+- **Encoding ≠ Security.** Encoded data can always be decoded back.
+- Sensitive data should never be stored client-side in plain or encoded form.
+- Use proper encryption and server-side validation to protect secrets.
 
 ---
 
