@@ -1,15 +1,44 @@
-Local Authority
+# 🏛️ Local Authority — Writeup
+
+
+
+---
+
+## 📌 Challenge Info
+- 🎯 **Category:** Web Exploitation  
+- 🌱 **Difficulty:** Easy  
+- 🏆 **Event:** picoCTF 2025  
+
+---
+
+## 🛠️ Steps to Solve
+
+### 1️⃣ Initial Login Attempt
+We were given a **login page** of a *Secure Customer Portal*.  
+So let’s try a default username and password: **admin : admin**  
+
+📸 Screenshot:  
 ![Uploading image.png…]()
 
-We were given a login page of a Secure Customer Portal. So lets try a default username and password which is admin:admin
+---
+
+### 2️⃣ Output from Wrong Credentials
+The login attempt failed.  
+
+📸 Screenshot:  
 ![Uploading image.png…]()
 
-so this is the output 
-![Uploading image.png…]()
+---
 
-let look inspect and look at the Network , we can see there is a few file which is login.php, style.css and secure.js
-so i tried opening the source of each of the file and found in secure.js there is a script 
-```
+### 3️⃣ Inspecting the Code 🔍
+By opening **Developer Tools → Network**, we saw several files being loaded:  
+- `login.php`  
+- `style.css`  
+- `secure.js`  
+
+So we inspected the source of each file. Inside **secure.js**, we found the following script:
+
+```javascript
 function checkPassword(username, password)
 {
   if( username === 'admin' && password === 'strongPassword098765' )
@@ -22,12 +51,27 @@ function checkPassword(username, password)
   }
 }
 ```
+### 4️⃣ Discovering the Credentials 🔑
+From the script, the correct login is clearly:  
+- **Username:** `admin`  
+- **Password:** `strongPassword098765`
 
-now we know the password!! lets try it username :admin password : strongPassword098765
+---
 
-and there you go we got the flag !
-##Flag 
-```strongPassword098765
+### 5️⃣ Successful Login 🎉
+We tried the credentials:  
+- Username: **admin**  
+- Password: **strongPassword098765**  
 
+📸 Screenshot:  
+![Uploading image.png…]()
+
+And we successfully logged in!
+
+---
+
+## 🎯 Flag
+```text
+picoCTF{j5_15_7r4n5p4r3n7_b0c2c9cb}
 ```
-
+✨ Game over — flag captured ✨
