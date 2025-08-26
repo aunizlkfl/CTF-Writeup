@@ -57,13 +57,13 @@ What the code does, step by step:
 
 ### 3️⃣ Option A — Run the Bookmarklet in Browser ⚡
 1. Copy everything starting from `javascript:(function(){ ... })();`  
-2. Paste into the browser’s address bar **or** run inside DevTools Console.  
-3. A popup will show the flag.
+2. Paste into the Chatgt.  
+3. And it will show the flag.
 
 ---
 
 ### 4️⃣ Option B — Decrypt Locally with Python 🐍
-Create a file named `decrypt.py`:
+Create a file named `decrypt.py`in kali linux:
 
 ```python
 # decrypt.py
@@ -83,11 +83,11 @@ Run it:
 python3 decrypt.py
 ```
 Output
-```text
+```
 Decrypted flag: picoCTF{p@g3_turn3r_0c0d211f}
 ```
-#🎯 Flag
-```text
+## 🎯 Flag
+```
 picoCTF{p@g3_turn3r_0c0d211f}
 ```
 ✨ Game over — bookmarklet cracked ✨
@@ -95,7 +95,7 @@ picoCTF{p@g3_turn3r_0c0d211f}
 
 ---
 
-### Explanation:
+## Explanation
 🔎 What Went Wrong
 
 ❌ Sensitive value (the flag) was embedded client-side.
@@ -104,10 +104,14 @@ picoCTF{p@g3_turn3r_0c0d211f}
 
 ❌ Anyone can inspect, copy, and reproduce the decryption offline.
 
-📝 Lessons Learned
+---
+
+## 📝 Lesson Learned
 
 ✅ Never trust client-side secrecy — users can always read JS.
 
 ✅ Don’t ship decryption keys/logic alongside ciphertext if secrecy matters.
 
-✅ Use server-side checks for sensitive material; treat obfuscation as cosmetic, not security.
+✅Use server-side checks for sensitive material; treat obfuscation as cosmetic, not security.
+
+---
