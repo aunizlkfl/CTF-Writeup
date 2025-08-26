@@ -18,7 +18,7 @@ We were given a **login page** of a *Secure Customer Portal*.
 So let’s try a default username and password: **admin : admin**  
 
 📸 Screenshot:  
-![Uploading image.png…]()
+
 
 ---
 
@@ -26,7 +26,7 @@ So let’s try a default username and password: **admin : admin**
 The login attempt failed.  
 
 📸 Screenshot:  
-![Uploading image.png…]()
+
 
 ---
 
@@ -64,7 +64,7 @@ We tried the credentials:
 - Password: **strongPassword098765**  
 
 📸 Screenshot:  
-![Uploading image.png…]()
+
 
 And we successfully logged in!
 
