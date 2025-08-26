@@ -11,7 +11,7 @@ First part of the flag
 picoCTF{t
 ```
 now lets look at the sources , there are 3 file which is index(that is weird looking usaly have and extension at the end) , myjs.js and mycss.css
-![Uploading Screenshot 2025-08-26 214536.png…]()
+
 
 
 so in the mycss.css we can see the second part of the flag  commented in the css
@@ -30,7 +30,7 @@ so , in the url of the website , we add /robots.txt and walla we found the third
 ![Uploading image.png…]()
 Third part of the flag
 ```
-h4ts_4_l0
+t_0f_pl4c
 ```
 
 and theres another hint : I think this is an apache server... can you Access the next flag?
@@ -55,6 +55,6 @@ Forth part of the flag
 _fa04427c}
 ```
 
-Flag = picoCTF{th4ts_4_l0t_0f_pl4c3s_2_lO0k_f7ce8828}
+Flag = picoCTF{th4ts_4_l0t_0f_pl4c3s_2_lO0k_fa04427c}
 
 
