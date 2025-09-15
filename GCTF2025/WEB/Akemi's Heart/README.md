@@ -1,4 +1,4 @@
-# Akemi’s Heart
+# Akami’s Heart
 
 <img width="787" height="333" alt="Screenshot 2025-09-15 120024" src="https://github.com/user-attachments/assets/fce1f475-f0de-404b-8364-76c7ee4a7f4d" />
 
