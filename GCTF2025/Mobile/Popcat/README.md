@@ -49,13 +49,41 @@ From this, we learn:
 
 - The flag is not directly visible but is generated at runtime.
 
-- It uses two encoded strings (f1, f2) from the app’s resources (strings.xml).
-
-- Both values are Base64 decoded, XOR’d with repeating keys (meow…), reversed, then concatenated
-Extracted resource values:
+- It uses two encoded strings (f1, f2) from the app’s resources (Resources → res → values → strings.xml) tree.
+  Extracted resource values:
 ```
 <string name="f1">MlUbKF4IXxQBVhgMWFcpIy4i</string>
 <string name="f2">EEROVkwiAUYGBls/MgEGQz8BAUM</string>
 ```
+
+- Both values are Base64 decoded, XOR’d with repeating keys (meow…), reversed, then concatenated
+
+To solve simply replicated the algorithm in Python:
+
+```
+import base64
+
+f1 = "MlUbKF4IXxQBVhgMWFcpIy4i"
+f2 = "EEROVkwiAUYGBls/MgEGQz8BAUM"
+
+k1 = b"meowmeowmeowmeow"
+k2 = b"meowmeowmeowmeowmeow"
+
+def b64fix(s): return s + "=" * ((4 - len(s) % 4) % 4)
+
+c1 = base64.b64decode(b64fix(f1))
+c2 = base64.b64decode(b64fix(f2))
+
+h1 = bytes([c1[i] ^ k1[i % len(k1)] for i in range(len(c1))])[::-1]
+h2 = bytes([c2[i] ^ k2[i % len(k2)] for i in range(len(c2))])[::-1]
+
+flag = (h1 + h2).decode()
+print(flag)
+```
+
+```flag
+GCTF25{w3lc0m3_t0_4ndR4id_H4ck1nG!!!!}
+```
+
 
 
