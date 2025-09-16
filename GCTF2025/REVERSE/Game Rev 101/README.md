@@ -16,6 +16,7 @@ Next, I inspected the game files with [AssetRipper](https://github.com/AssetRipp
 After loading the game into AssetRipper, I could see the overall project structure:  
 
 There we can see the overall game structure 
+
 <img width="505" height="693" alt="Screenshot 2025-09-14 191704" src="https://github.com/user-attachments/assets/73a1af97-ef7d-46e3-8dec-b0e5ffa9481b" />
  
 Unity games store each scene as `levelX`.  
