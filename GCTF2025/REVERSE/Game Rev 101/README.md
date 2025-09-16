@@ -8,7 +8,7 @@ We were given a Unity-based game build with the hint:
 *“I can’t reach the …. Uhukss”*  
 
 I first tried playing the game normally, but there was no clear way to reach the flag.  
-Next, I inspected the game files with [AssetRipper](https://github.com/AssetRipper/AssetRipper).
+Next, I inspected the game folder(gameRev102_Data) with [AssetRipper](https://github.com/AssetRipper/AssetRipper).
 
 ---
 
@@ -20,10 +20,16 @@ There we can see the overall game structure
 <img width="505" height="693" alt="Screenshot 2025-09-14 191704" src="https://github.com/user-attachments/assets/73a1af97-ef7d-46e3-8dec-b0e5ffa9481b" />
  
 Unity games store each scene as `levelX`.  
-- `level0` → mapped to the main game scene.  
-- `level1` → looked suspicious, likely the Win or hidden goal scene.  
+- `level0` → mapped to the main game scene.
 
-So I opened **level1** in AssetRipper.  
+  <img width="672" height="722" alt="image" src="https://github.com/user-attachments/assets/6a65d9f5-6b19-4bb3-9870-95bc69b831ca" />
+
+- `level1` → mappedd to scene Win
+
+  <img width="660" height="763" alt="image" src="https://github.com/user-attachments/assets/e591219e-8101-4c2f-bca5-aceb1cd77d10" />
+
+
+So I opened **level1** file in AssetRipper.  
 Inside the **Sprite Data Storage**, I found a sprite named **goal**. This immediately stood out as the place where the flag could be hidden.  
 
 <img width="1060" height="343" alt="Screenshot 2025-09-14 195711" src="https://github.com/user-attachments/assets/1926ba68-82a3-420a-b095-0fa9565d4e49" />
