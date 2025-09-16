@@ -1,5 +1,7 @@
 # Game Rev 102
 
+>only include the file i used for this challenge cause it's kinda big to upload here
+
 <img width="807" height="275" alt="Screenshot 2025-09-14 183900" src="https://github.com/user-attachments/assets/181b59b3-be7b-43d5-b512-5bceba169cc1" />
 
 ## Challenge
