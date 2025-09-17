@@ -1,4 +1,4 @@
-# INVITAION TO JAVA
+# INVITATION TO JAVA
 <img width="789" height="306" alt="image" src="https://github.com/user-attachments/assets/e78a8765-2972-4f79-94c7-5989120b2b99" />
 
 Reverse the Java JAR and recover the flag.
