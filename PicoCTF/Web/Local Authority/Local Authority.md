@@ -1,6 +1,7 @@
 # 🏛️ Local Authority — Writeup
 
-![Uploading Screenshot 2025-08-26 190619.png…]()
+<img width="562" height="373" alt="image" src="https://github.com/user-attachments/assets/f4a999f1-8103-4781-ab38-558558d02af7" />
+
 
 
 ---
