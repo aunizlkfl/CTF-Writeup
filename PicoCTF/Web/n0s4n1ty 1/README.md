@@ -39,9 +39,8 @@ The code shows **no validation checks** on file type or extension. This means we
 
 ### 3️⃣ Upload a PHP Webshell
 We created a simple PHP shell:
-```php
-<?php system($_REQUEST['cmd']); ?>
-```
+<img width="986" height="103" alt="image" src="https://github.com/user-attachments/assets/865e1bfd-ed18-4a26-85b3-9f780fe04b81" />
+
 Saved it as `upload.php` or any name you want and uploaded it successfully.
 
 📸 Screenshot:
